@@ -9,7 +9,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-const whitelist = ['http://localhost:8080','http://127.0.0.1:5500', 'http://localhost:3000/', 'http://127.0.0.1:5501'];
+const whitelist = ['http://localhost:8080', 'http://127.0.0.1:5500', 'http://localhost:3000/', 'http://127.0.0.1:5501', 'https://tavopaz12.github.io/lista-pendientes/'];
 const options = {
   origin: (origin, callback) => {
     if (whitelist.includes(origin)) {
@@ -38,5 +38,5 @@ app.use(errorHandler);
 
 
 app.listen(port, () => {
-  console.log('Mi port' +  port);
+  console.log('Mi port' + port);
 });
